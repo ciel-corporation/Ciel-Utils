@@ -1,0 +1,19 @@
+{
+  "name": "usefulFromCiel",
+  "description": "useful stuff for bot Ciel",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "mongoose": "^6.5.1",
+    "parse-ms": "2.1.0"
+  },
+  "engines": {
+    "node": "^16.x"
+  },
+  "license": "Apache-2.0",
+  "author": "HarukaYamamoto0 - github"
+}
