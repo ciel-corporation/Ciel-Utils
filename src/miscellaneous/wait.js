@@ -1,9 +1,9 @@
 /**
  * A way to catch the errors of an async await without using try catch
- * @params {promise} - the promise to be resolved
- * @returns {array} - an array of two positions, error and data
+ * @params {Promise} - the promise to be resolved
+ * @returns {object} - an object containing the error and data properties
  * @example
- * const [error, data] = await wait(promise());
+ * const {error, data} = await wait(promise());
  * if (error) return console.error(error);
  * else console.log(data);
  */

@@ -8,8 +8,8 @@
 function cooldown(timestamp, rechargeTime) {
   const time = rechargeTime - (Date.now() - timestamp);
 
-  if (timestamp !== null && time > 0) return [false, time];
-  else return [true, time];
+  if (timestamp !== null && time > 0) return ([false, time]);
+  else return ([true, time]);
 }
 
 module.exports = cooldown;

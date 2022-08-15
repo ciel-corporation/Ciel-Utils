@@ -1,6 +1,7 @@
 .env
 package-lock.json
 node_modules
+coverage/
 shrinkwrap.yaml
 .glitch-assets
 src/config.json
