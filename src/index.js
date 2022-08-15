@@ -14,7 +14,8 @@ exports.convertMs = require("./dates/convertMs.js");
 exports.time = require("./dates/time.js");
 
 // Miscellaneous
-exports.abrrev = require("./miscellaneous/abbrev.js");
+exports.abbrev = require("./miscellaneous/abbrev.js");
 exports.cooldown = require("./miscellaneous/cooldown.js");
-exports.getLovePercentage = require("./miscellaneous/getLovePercentage.js");
+exports.lovePercentage = require("./miscellaneous/lovePercentage.js");
+exports.sleep = require("./miscellaneous/sleep.js");
 exports.wait = require("./miscellaneous/wait.js");
