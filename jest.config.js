@@ -1,7 +1,10 @@
 module.exports = {
   bail: 1,
+  cacheDirectory: "/tmp/jest_rs",
   clearMocks: true,
   coverageProvider: "v8",
-  testEnvironment: "node",
+  coverageDirectory: "coverage",
+  collectCoverage: true,
+  testEnvironment: "jest-environment-node",
   testMatch: ["**/tests/**/*.test.js?(x)"],
 };
