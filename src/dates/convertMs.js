@@ -1,27 +1,21 @@
-const parse = require("parse-ms");
-
 /**
- * This function is normally used in cooldown systems
- * @param {date} - a date object
- * @returns {string} - the formatted date
+ * @author 5antos#4876
+ * @param {number} ms Time value in milliseconds
+ * @returns {object} Object with the converted time in days, hours, minutes and seconds
  */
-function convertMs(date) {
-  if (!date?.getTime) throw new Error("date not found!");
 
-  const milliseconds = parse(date.getTime());
-  const { days, hours, minutes, seconds } = milliseconds;
+function convertMilliseconds(ms) {
+  const seconds = ~~(ms / 1000);
+  const minutes = ~~(seconds / 60);
+  const hours = ~~(minutes / 60);
+  const days = ~~(hours / 24);
 
-  function format(timer, type) {
-    if (timer <= 0) return "";
-    return `${timer}${type}`;
-  }
-
-  const day = format(days, "d");
-  const hour = format(hours, "h");
-  const minute = format(minutes, "m");
-  const second = format(seconds, "s");
-
-  return `${day} ${hour} ${minute} ${second}`.trim();
+  return {
+    days: days,
+    hours: hours % 24,
+    minutes: minutes % 60,
+    seconds: seconds % 60,
+  };
 }
 
-module.exports = convertMs;
+module.exports = convertMilliseconds;
